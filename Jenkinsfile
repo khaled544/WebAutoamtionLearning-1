@@ -12,21 +12,21 @@ pipeline {
         stage('Build') {
             steps {
                 // Run build commands (adjust as per your project)
-                sh 'mvn clean install'  // Example for a Maven project
+                bat 'mvn clean install'  // Example for a Maven project
             }
         }
 
         stage('Test') {
             steps {
                 // Run the tests (e.g., Selenium, Unit Tests)
-                sh 'mvn test'  // Example for running tests using Maven
+                bat 'mvn test'  // Example for running tests using Maven
             }
         }
 
         stage('Deploy') {
             steps {
                 // Deploy the app (adjust with your deployment process)
-                sh './deploy.sh'
+                bat './deploy.sh'
             }
         }
     }
